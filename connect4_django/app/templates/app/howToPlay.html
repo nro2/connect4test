@@ -1,0 +1,21 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+<br />
+<h4>Object of the Game</h4>
+<p>
+    Be th first player to get four of your colored chckers in a row.  This can be achieved
+    horizontally vertically or diagonally.
+</p>
+<br />
+
+<h4>Play</h4>
+<ol>
+    <li>On your turn, click any of the columns where there is an empty slot available.</li>
+    <li>Play alternates until one player gets 4 checkers in a row.</li>
+</ol>
+
+{% endblock %}
