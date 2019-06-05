@@ -16,5 +16,6 @@ urlpatterns = [
     path('select/', views.select, name='select'),
     path('newgame/', views.newGame, name='newgame'),
     path('play/', views.play, name='play'),
+    path('twoplayer/', views.twoPlayer, name='twoplayer'),
     path('admin/', admin.site.urls),
 ]

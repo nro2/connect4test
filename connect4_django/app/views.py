@@ -89,15 +89,8 @@ def onePlayer(request):
 
 def twoPlayer(request):
     assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/play.html',
-        {
-            'title':'Connect 4',
-            'year':datetime.now().year,
-        }
-    )
+    return HttpResponseRedirect('/play/')
 
 def newGame(request):
     assert isinstance(request, HttpRequest)
-    return HttpResponseRedirect('/play/')
+    return HttpResponseRedirect('/select/')
