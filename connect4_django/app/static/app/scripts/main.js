@@ -13,7 +13,9 @@ const boardMap = Array.from({ length: ROWS }, () => (
 
 
 var player = 'Black';
+
 alert('Black starts!')
+
 $('td').click(function () {
     var myClass = $(this).attr("class");
     makeMove(myClass);
@@ -21,7 +23,6 @@ $('td').click(function () {
     if (result === true) {
         gameOver();
     }
-
 });
 
 function makeMove(myClass) {
