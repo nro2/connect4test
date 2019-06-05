@@ -43,3 +43,28 @@ def about(request):
             'year':datetime.now().year,
         }
     )
+
+def select(request):
+    """Renders the select page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/select.html',
+        {
+            'title':'Select Game Mode',
+            'message': 'Select number of players and difficulty.',
+            'year':datetime.now().year,
+        }
+    )
+
+def play(request):
+    """Renders the game."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/game.html',
+        {
+            'title':'Connect 4',
+            'year':datetime.now().year,
+        }
+    )
