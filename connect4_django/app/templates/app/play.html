@@ -2,8 +2,13 @@
 
 {% block content %}
 
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<h2 class="text-center">{{ title }}.</h2>
+
 <body>
-    <h2 class="text-center">{{ title }}.</h2>
     <table id="board" align="center">
         <tbody>
             <tr>
@@ -62,15 +67,15 @@
             </tr>
         </tbody>
     </table>
-    <br>
-    <br>
-
-    <form class="text-center" action='/select/' method="post">
-        {% csrf_token %}
-        <input type='submit' name="New Game" value='New Game'/>
-    </form>
-
 </body>
+
+<br>
+<br>
+
+<form class="text-center" action='/select/' method="post">
+    {% csrf_token %}
+    <input type='submit' name="New Game" value='New Game'/>
+</form>
 
 <script src="../../static/app/scripts/main.js"></script>
 
