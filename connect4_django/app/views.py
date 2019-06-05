@@ -19,6 +19,7 @@ def home(request):
         }
     )
 
+
 def howToPlay(request):
     """Renders the contact page."""
     assert isinstance(request, HttpRequest)
@@ -31,6 +32,7 @@ def howToPlay(request):
             'year':datetime.now().year,
         }
     )
+
 
 def about(request):
     """Renders the about page."""
@@ -45,6 +47,7 @@ def about(request):
         }
     )
 
+
 def select(request):
     """Renders the select page."""
     assert isinstance(request, HttpRequest)
@@ -58,6 +61,7 @@ def select(request):
         }
     )
 
+
 def play(request):
     """Renders the game."""
     assert isinstance(request, HttpRequest)
@@ -70,6 +74,7 @@ def play(request):
         }
     )
 
+
 def onePlayer(request):
     assert isinstance(request, HttpRequest)
     return render(
@@ -80,6 +85,7 @@ def onePlayer(request):
             'year':datetime.now().year,
         }
     )
+
 
 def twoPlayer(request):
     assert isinstance(request, HttpRequest)

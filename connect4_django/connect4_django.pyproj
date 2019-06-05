@@ -58,8 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\static\app\scripts\main.js" />
-    <Content Include="app\templates\app\select.html" />
     <Content Include="app\templates\app\play.html" />
+    <Content Include="app\templates\app\select.html" />
+    <Content Include="app\templates\app\play1.html" />
     <Content Include="app\templates\images\Connect_4_Board_and_Box.jpg" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
@@ -89,11 +90,6 @@
     <Content Include="app\templates\app\howToPlay.html" />
     <Content Include="app\templates\app\index.html" />
     <Content Include="app\templates\app\layout.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="readme.html">
-      <SubType>WebBrowser</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|VisualStudio|virtual environment for django" />
