@@ -14,6 +14,7 @@ urlpatterns = [
     path('howtoplay/', views.howToPlay, name='howtoplay'),
     path('about/', views.about, name='about'),
     path('select/', views.select, name='select'),
+    path('newgame/', views.newGame, name='newgame'),
     path('play/', views.play, name='play'),
     path('admin/', admin.site.urls),
 ]

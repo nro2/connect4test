@@ -4,7 +4,8 @@ Definition of views.
 
 from datetime import datetime
 from django.shortcuts import render
-from django.http import HttpRequest
+from django.http import HttpRequest, HttpResponseRedirect
+
 
 def home(request):
     """Renders the home page."""
@@ -62,7 +63,7 @@ def play(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/game.html',
+        'app/play.html',
         {
             'title':'Connect 4',
             'year':datetime.now().year,
@@ -73,7 +74,7 @@ def onePlayer(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/game.html',
+        'app/play.html',
         {
             'title':'Connect 4',
             'year':datetime.now().year,
@@ -84,7 +85,7 @@ def twoPlayer(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/game.html',
+        'app/play.html',
         {
             'title':'Connect 4',
             'year':datetime.now().year,
@@ -92,4 +93,5 @@ def twoPlayer(request):
     )
 
 def newGame(request):
+    assert isinstance(request, HttpRequest)
     return HttpResponseRedirect('/play/')

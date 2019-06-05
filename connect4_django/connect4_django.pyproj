@@ -59,7 +59,7 @@
   <ItemGroup>
     <Content Include="app\static\app\scripts\main.js" />
     <Content Include="app\templates\app\select.html" />
-    <Content Include="app\templates\app\game.html" />
+    <Content Include="app\templates\app\play.html" />
     <Content Include="app\templates\images\Connect_4_Board_and_Box.jpg" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
