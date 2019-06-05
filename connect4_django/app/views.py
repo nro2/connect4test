@@ -18,7 +18,7 @@ def home(request):
         }
     )
 
-def contact(request):
+def howToPlay(request):
     """Renders the contact page."""
     assert isinstance(request, HttpRequest)
     return render(
