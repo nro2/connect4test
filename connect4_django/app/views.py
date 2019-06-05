@@ -68,3 +68,28 @@ def play(request):
             'year':datetime.now().year,
         }
     )
+
+def onePlayer(request):
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/game.html',
+        {
+            'title':'Connect 4',
+            'year':datetime.now().year,
+        }
+    )
+
+def twoPlayer(request):
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/game.html',
+        {
+            'title':'Connect 4',
+            'year':datetime.now().year,
+        }
+    )
+
+def newGame(request):
+    return HttpResponseRedirect('/play/')

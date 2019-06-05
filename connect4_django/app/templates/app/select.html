@@ -5,5 +5,11 @@
 <h2 class="text-center">{{ title }}.</h2>
 <h3 class="text-center">{{ message }}</h3>
 
+<form method="post">
+    {% csrf_token %}
+    <input action='/onePlayer/' type='submit' value='1 Player' />
+    <input action='/twoPlayer/' type='submit' value='2 Player' />
+</form>
+
 
 {% end block %}
