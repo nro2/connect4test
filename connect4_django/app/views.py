@@ -12,7 +12,7 @@ def home(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/index.html',
+        'index.html',
         {
             'title':'Home Page',
             'year':datetime.now().year,
@@ -25,7 +25,7 @@ def howToPlay(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/howToPlay.html',
+        'howToPlay.html',
         {
             'title':'How To Play',
             'message':'Instructions for Connect 4.',
@@ -33,59 +33,54 @@ def howToPlay(request):
         }
     )
 
-
 def about(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/about.html',
+        'about.html',
         {
             'title':'About',
             'message':'Your application description page.',
-            'year':datetime.now().year,
+            'year': datetime.now().year,
         }
     )
-
 
 def select(request):
     """Renders the select page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/select.html',
+        'select.html',
         {
             'title':'Select Game Mode',
             'message': 'Select number of players and difficulty.',
-            'year':datetime.now().year,
+            'year': datetime.now().year,
         }
     )
-
 
 def play(request):
     """Renders the game."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/play.html',
+        'play.html',
         {
             'title':'Connect 4',
             'year':datetime.now().year,
         }
     )
-
 
 def onePlayer(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/play.html',
+        'play.html',
         {
             'title':'Connect 4',
             'year':datetime.now().year,
         }
     )
-
 
 def twoPlayer(request):
     assert isinstance(request, HttpRequest)

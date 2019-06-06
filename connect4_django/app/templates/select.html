@@ -1,0 +1,18 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<h2 class="text-center">{{ title }}.</h2>
+<h3 class="text-center">{{ message }}</h3>
+
+<br />
+
+<form action='/twoplayer/' class="text-center" method="post">
+    {% csrf_token %}
+    <input type='submit' value='Random AI' />
+    <input type='submit' value='Greedy AI' />
+    <input type='submit' value='Perfect AI' />
+    <input type='submit' value='2 Player' />
+</form>
+
+{% endblock  %}
