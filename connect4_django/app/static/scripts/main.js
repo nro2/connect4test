@@ -1,20 +1,13 @@
-//empty = 0
-//black = 1
-//red = 2
-
 const EMPTY = 0;
 const BLACK = 1;
 const RED = 2;
 const ROWS = 6;
 const COLS = 7;
-var isOver = false;
-var lastCol = 0;
-
 const boardMap = Array.from({ length: ROWS }, () => (
     Array.from({ length: COLS }, () => 0)
 ));
 
-
+var lastCol = 0;
 var player = 'Black';
 
 alert('Black starts!')
@@ -22,8 +15,7 @@ alert('Black starts!')
 $('td').click(function () {
     var myClass = $(this).attr("class");
     makeMove(myClass);
-    var result = checkWinner(lastCol);
-    if (result === true) {
+    if (checkWinner(lastCol)) {
         gameOver();
     }
 });
@@ -48,14 +40,14 @@ function makeMove(myClass) {
             return false;
         }
     });
-};
+}
 
 function checkWinner(lastCol) {
     if (isDraw() || is_winner_vert(lastCol) || is_winner_horiz(lastCol) || is_winner_diagl(lastCol) || is_winner_diagr(lastCol)) {
         return true;
     }
     return false;
-};
+}
 
 function is_winner_vert(lastCol) {
     let count = 1;
@@ -151,7 +143,6 @@ function is_winner_diagl(lastCol) {
     return false;
 }
 
-
 function is_winner_diagr(lastCol) {
     var count = 1;
     var piece;
@@ -225,4 +216,4 @@ function gameOver() {
     else {
         alert('Game over, black wins!');
     }
-};
+}
