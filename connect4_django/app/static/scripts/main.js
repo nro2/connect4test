@@ -48,7 +48,7 @@ function makeMove(myClass) {
 };
 
 function checkWinner(lastCol) {
-    if (is_winner_vert(lastCol) || is_winner_horiz(lastCol) || is_winner_diagl(lastCol) || is_winner_diagr(lastCol)) {
+    if (isDraw() || is_winner_vert(lastCol) || is_winner_horiz(lastCol) || is_winner_diagl(lastCol) || is_winner_diagr(lastCol)) {
         return true;
     }
     return false;
@@ -202,8 +202,21 @@ function is_winner_diagr(lastCol) {
     return false;
 }
 
+function isDraw() {
+    for (var col = 0; i < COLS; ++col)
+	{
+		if (_game_board[0][col] === 0) {
+            return false;
+        }
+	}
+	return true;
+}
+
 function gameOver() {
-    if (player === 'Black') {
+    if (isDraw()){
+        alert('Game over, it\'s a draw')
+    }
+    else if (player === 'Black') {
         alert('Game over, red wins!');
     }
     else {
