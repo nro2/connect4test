@@ -2,6 +2,9 @@
 //black = 1
 //red = 2
 
+const EMPTY = 0;
+const BLACK = 1;
+const RED = 2;
 const ROWS = 6;
 const COLS = 7;
 var isOver = false;
@@ -57,7 +60,7 @@ function checkWinner(lastCol) {
 function is_winner_vert(lastCol) {
     let count = 1;
     for (let i = 0; i < ROWS; i++) {
-        if (boardMap[i][lastCol] === 1 || boardMap[i][lastCol] === 2) {
+        if (boardMap[i][lastCol] === BLACK || boardMap[i][lastCol] === RED) {
             for (let j = i + 1; j < ROWS; j++) {
                 if (boardMap[j][lastCol] == boardMap[i][lastCol]) {
                     count++;
@@ -203,9 +206,9 @@ function is_winner_diagr(lastCol) {
 }
 
 function isDraw() {
-    for (var col = 0; i < COLS; ++col)
+    for (var col = 0; col < COLS; ++col)
 	{
-		if (_game_board[0][col] === 0) {
+		if (boardMap[0][col] === EMPTY) {
             return false;
         }
 	}
