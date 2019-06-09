@@ -28,7 +28,7 @@ def howToPlay(request):
         'howToPlay.html',
         {
             'title':'How To Play',
-            'message':'Instructions for Connect 4.',
+            'message':'',
             'year':datetime.now().year,
         }
     )

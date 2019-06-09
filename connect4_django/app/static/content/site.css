@@ -2,11 +2,13 @@ body {
     margin: 0;
     padding-bottom: 20px;
     text-align: center;
+    font-family: 'Acme', sans-serif;
 }
 
 .navbar {
     margin-bottom: 30px;
-    background: #4245f4
+    background: #4245f4;
+    font-family: 'Acme', sans-serif;
 }
 
 ul.nav a:hover {
@@ -59,4 +61,8 @@ td {
         display: block;
         margin: 0.2em auto;
     }
+}
+
+.indeximg {
+    margin-bottom: 10px;
 }
