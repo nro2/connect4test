@@ -198,10 +198,24 @@ function isDraw() {
 
 function gameOver() {
     if (isDraw()) {
-        swal("Game over!", "It\'s a draw!");
+        swal("Game over!", "It\'s a draw!").then(okay => {
+            if (okay) {
+                swal("OKAY WORKED!")
+            }
+        })
     } else if (player === 'Black') {
-        swal("Game over!", "Red wins!");
+        swal("Game over!", "Red wins!").then(okay => {
+            if (okay) {
+                swal("OKAY WORKED!")
+                document.getElementById('td').style.pointerEvents = 'none'
+            }
+        });
     } else {
-        swal("Game over!", "Black wins!");
+        swal("Game over!", "Black wins!").then(okay => {
+            if (okay) {
+                swal("OKAY WORKED!")
+                document.getElementById('td').style.pointerEvents = 'none'
+            }
+        });
     }
 }

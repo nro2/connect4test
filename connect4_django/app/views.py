@@ -54,7 +54,7 @@ def select(request):
         'select.html',
         {
             'title':'Select Game Mode',
-            'message': 'Select number of players and difficulty.',
+            'message': 'Select number of players and difficulty',
             'year': datetime.now().year,
         }
     )
