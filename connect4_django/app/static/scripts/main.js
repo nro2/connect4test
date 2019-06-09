@@ -207,14 +207,12 @@ function gameOver() {
         swal("Game over!", "Red wins!").then(okay => {
             if (okay) {
                 swal("OKAY WORKED!")
-                document.getElementById('td').style.pointerEvents = 'none'
             }
         });
     } else {
         swal("Game over!", "Black wins!").then(okay => {
             if (okay) {
                 swal("OKAY WORKED!")
-                document.getElementById('td').style.pointerEvents = 'none'
             }
         });
     }
