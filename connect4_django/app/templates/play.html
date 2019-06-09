@@ -67,11 +67,13 @@
 
     <form class="text-center" action='/select/' method="post" name="newgame" value="0">
         {% csrf_token %}
-        <input type='submit' name="newgame" value='New Game' />
+        <input type='submit' class="btn btn-primary" name="newgame" value='New Game' />
     </form>
 
 </body>
 {% endblock %} {% block scripts %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="../../static/scripts/main.js"></script>
+
 {% endblock %}

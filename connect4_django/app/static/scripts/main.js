@@ -10,9 +10,9 @@ const boardMap = Array.from({ length: ROWS }, () => (
 var lastCol = 0;
 var player = 'Black';
 
-alert('Black starts!')
+swal("Black starts!")
 
-$('td').click(function () {
+$('td').click(function() {
     var myClass = $(this).attr("class");
     makeMove(myClass);
     if (checkWinner(lastCol)) {
@@ -21,7 +21,7 @@ $('td').click(function () {
 });
 
 function makeMove(myClass) {
-    $($('.' + myClass).get().reverse()).each(function (index) {
+    $($('.' + myClass).get().reverse()).each(function(index) {
         if (!$(this).hasClass("red") && !$(this).hasClass("black")) {
             var colNum = parseInt(this.className.charAt(3), 10);
 
@@ -30,8 +30,7 @@ function makeMove(myClass) {
                 player = 'Red';
                 lastCol = colNum;
                 boardMap[ROWS - 1 - index][colNum] = 1;
-            }
-            else if (player === 'Red') {
+            } else if (player === 'Red') {
                 $(this).addClass('red');
                 player = 'Black';
                 lastCol = colNum;
@@ -57,8 +56,7 @@ function is_winner_vert(lastCol) {
                 if (boardMap[j][lastCol] == boardMap[i][lastCol]) {
                     count++;
                     console.log(j + ' is first and ' + i + ' is second and count is ' + count + ' and lastCol is ' + lastCol)
-                }
-                else {
+                } else {
                     break;
                 }
             }
@@ -78,16 +76,14 @@ function is_winner_horiz(lastCol) {
             for (let j = lastCol + 1; j < COLS; j++) {
                 if (boardMap[i][j] === boardMap[i][lastCol]) {
                     count++;
-                }
-                else {
+                } else {
                     break;
                 }
             }
             for (let j = lastCol - 1; j >= 0; j--) {
                 if (boardMap[i][j] === boardMap[i][lastCol]) {
                     count++;
-                }
-                else {
+                } else {
                     break;
                 }
             }
@@ -116,8 +112,7 @@ function is_winner_diagl(lastCol) {
                     if (boardMap[row][cols] === piece)
                         ++count;
                     else break;
-                }
-                else break;
+                } else break;
             } while (boardMap[row][cols] === piece);
 
             row = i + 1;
@@ -130,8 +125,7 @@ function is_winner_diagl(lastCol) {
                     if (boardMap[row][cols] === piece)
                         ++count;
                     else break;
-                }
-                else break;
+                } else break;
             } while (boardMap[row][cols] === piece);
 
             if (count >= 4)
@@ -161,8 +155,7 @@ function is_winner_diagr(lastCol) {
                     else {
                         break;
                     }
-                }
-                else {
+                } else {
                     break;
                 }
             } while (boardMap[row][cols] === piece);
@@ -179,16 +172,14 @@ function is_winner_diagr(lastCol) {
                     else {
                         break;
                     }
-                }
-                else {
+                } else {
                     break;
                 }
             } while (boardMap[row][cols] === piece);
 
             if (count >= 4) {
                 return true;
-            }
-            else {
+            } else {
                 return false;
             }
         }
@@ -197,23 +188,20 @@ function is_winner_diagr(lastCol) {
 }
 
 function isDraw() {
-    for (var col = 0; col < COLS; ++col)
-	{
-		if (boardMap[0][col] === EMPTY) {
+    for (var col = 0; col < COLS; ++col) {
+        if (boardMap[0][col] === EMPTY) {
             return false;
         }
-	}
-	return true;
+    }
+    return true;
 }
 
 function gameOver() {
-    if (isDraw()){
-        alert('Game over, it\'s a draw')
-    }
-    else if (player === 'Black') {
-        alert('Game over, red wins!');
-    }
-    else {
-        alert('Game over, black wins!');
+    if (isDraw()) {
+        swal("Game over!", "It\'s a draw!");
+    } else if (player === 'Black') {
+        swal("Game over!", "Red wins!");
+    } else {
+        swal("Game over!", "Black wins!");
     }
 }

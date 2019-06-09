@@ -27,6 +27,11 @@ td {
     background-color: white;
     border-radius: 50%;
     margin: 5px;
+    box-shadow: 0 1px 6px inset #888
+}
+
+tbody {
+    box-shadow: 0px 0px 5px #888;
 }
 
 .red {
