@@ -5,9 +5,11 @@
 <h1 class="text-center">Welcome to Connect 4</h1>
 
 <br />
+<img src="../static/content/gamepic.jpg">
+<br>
 
 <form class="text-center" action='/newgame/' method="post">{% csrf_token %}
-    <input type='submit' name="New Game" value='New Game'/>
+    <input type='submit' class="button3" name="New Game" value='New Game'/>
 </form>
 
 <br />
