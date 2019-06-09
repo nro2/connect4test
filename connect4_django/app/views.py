@@ -28,7 +28,7 @@ def howToPlay(request):
         'howToPlay.html',
         {
             'title':'How To Play',
-            'message':'Instructions for Connect 4.',
+            'message':'',
             'year':datetime.now().year,
         }
     )
@@ -54,7 +54,7 @@ def select(request):
         'select.html',
         {
             'title':'Select Game Mode',
-            'message': 'Select number of players and difficulty.',
+            'message': 'Select number of players and difficulty',
             'year': datetime.now().year,
         }
     )

@@ -1,7 +1,18 @@
 body {
-    padding-top: 50px;
+    margin: 0;
     padding-bottom: 20px;
     text-align: center;
+    font-family: 'Acme', sans-serif;
+}
+
+.navbar {
+    margin-bottom: 30px;
+    background: #4245f4;
+    font-family: 'Acme', sans-serif;
+}
+
+ul.nav a:hover {
+    color: #fff !important;
 }
 
 table {
@@ -16,6 +27,11 @@ td {
     background-color: white;
     border-radius: 50%;
     margin: 5px;
+    box-shadow: 0 1px 6px inset #888
+}
+
+tbody {
+    box-shadow: 0px 0px 5px #888;
 }
 
 .red {
@@ -24,4 +40,34 @@ td {
 
 .black {
     background-color: black;
+}
+
+.button3 {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: #4245f4;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.button3:hover {
+    background-color: #4095c6;
+}
+
+@media all and (max-width:30em) {
+    .button3 {
+        display: block;
+        margin: 0.2em auto;
+    }
+}
+
+.indeximg {
+    margin-bottom: 10px;
 }

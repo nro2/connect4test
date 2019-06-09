@@ -1,22 +1,20 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block content %}
 
-{% block content %}
-
-<h1 class="text-center">Welcome to Connect 4</h1>
+<h1 class="text-center">Welcome to Connect 4!</h1>
 
 <br />
+<img src="../static/content/gamepic.jpg" class="indeximg">
+<br>
 
 <form class="text-center" action='/newgame/' method="post">{% csrf_token %}
-    <input type='submit' name="New Game" value='New Game'/>
+    <input type='submit' class="btn btn-success" class="button3" name="New Game" value='New Game' />
 </form>
 
 <br />
 
 <div class="row">
     <div class="col-md-12">
-        <h2>Microsoft Azure</h2>
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
-        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+
     </div>
 </div>
 

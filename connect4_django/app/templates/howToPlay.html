@@ -1,24 +1,22 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block content %}
 
-{% block content %}
-
-<h1 class="text-center">{{ title }}.</h1>
+<h1 class="text-center">{{ title }}</h1>
 <h3 class="text-center">{{ message }}</h3>
 
 <br />
 
 <h4>Object of the Game</h4>
 <p>
-    Be th first player to get four of your colored chckers in a row.  This can be achieved
-    horizontally, vertically or diagonally.
+    Be the first player to get four of your colored chckers in a row. This can be achieved horizontally, vertically or diagonally.
 </p>
 
 <br />
 
-<h4>Play</h4>
-<ol>
+<h2>
+    <a href="/newgame/">Play!</a></h2>
+<ul style="list-style: none;">
     <li>On your turn, click any of the columns that have an empty slot available.</li>
     <li>Play alternates until one player gets 4 checkers in a row or there are no more moves available.</li>
-</ol>
+</ul>
 
 {% endblock %}

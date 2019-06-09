@@ -1,81 +1,79 @@
-{% extends "layout.html" %}
-
-{% block content %}
+{% extends "layout.html" %} {% block content %}
 
 <body>
-        <h2 class="text-center">{{ title }}.</h2>
+    <h2 class="text-center">{{ title }}</h2>
 
-        <table id="board" align="center">
-            <tbody>
-                <tr>
-                    <td class="col0"></td>
-                    <td class="col1"></td>
-                    <td class="col2"></td>
-                    <td class="col3"></td>
-                    <td class="col4"></td>
-                    <td class="col5"></td>
-                    <td class="col6"></td>
-                </tr>
-                <tr>
-                    <td class="col0"></td>
-                    <td class="col1"></td>
-                    <td class="col2"></td>
-                    <td class="col3"></td>
-                    <td class="col4"></td>
-                    <td class="col5"></td>
-                    <td class="col6"></td>
-                </tr>
-                <tr>
-                    <td class="col0"></td>
-                    <td class="col1"></td>
-                    <td class="col2"></td>
-                    <td class="col3"></td>
-                    <td class="col4"></td>
-                    <td class="col5"></td>
-                    <td class="col6"></td>
-                </tr>
-                <tr>
-                    <td class="col0"></td>
-                    <td class="col1"></td>
-                    <td class="col2"></td>
-                    <td class="col3"></td>
-                    <td class="col4"></td>
-                    <td class="col5"></td>
-                    <td class="col6"></td>
-                </tr>
-                <tr>
-                    <td class="col0"></td>
-                    <td class="col1"></td>
-                    <td class="col2"></td>
-                    <td class="col3"></td>
-                    <td class="col4"></td>
-                    <td class="col5"></td>
-                    <td class="col6"></td>
-                </tr>
-                <tr>
-                    <td class="col0"></td>
-                    <td class="col1"></td>
-                    <td class="col2"></td>
-                    <td class="col3"></td>
-                    <td class="col4"></td>
-                    <td class="col5"></td>
-                    <td class="col6"></td>
-                </tr>
-            </tbody>
-        </table>
+    <table id="board" align="center">
+        <tbody>
+            <tr>
+                <td class="col0"></td>
+                <td class="col1"></td>
+                <td class="col2"></td>
+                <td class="col3"></td>
+                <td class="col4"></td>
+                <td class="col5"></td>
+                <td class="col6"></td>
+            </tr>
+            <tr>
+                <td class="col0"></td>
+                <td class="col1"></td>
+                <td class="col2"></td>
+                <td class="col3"></td>
+                <td class="col4"></td>
+                <td class="col5"></td>
+                <td class="col6"></td>
+            </tr>
+            <tr>
+                <td class="col0"></td>
+                <td class="col1"></td>
+                <td class="col2"></td>
+                <td class="col3"></td>
+                <td class="col4"></td>
+                <td class="col5"></td>
+                <td class="col6"></td>
+            </tr>
+            <tr>
+                <td class="col0"></td>
+                <td class="col1"></td>
+                <td class="col2"></td>
+                <td class="col3"></td>
+                <td class="col4"></td>
+                <td class="col5"></td>
+                <td class="col6"></td>
+            </tr>
+            <tr>
+                <td class="col0"></td>
+                <td class="col1"></td>
+                <td class="col2"></td>
+                <td class="col3"></td>
+                <td class="col4"></td>
+                <td class="col5"></td>
+                <td class="col6"></td>
+            </tr>
+            <tr>
+                <td class="col0"></td>
+                <td class="col1"></td>
+                <td class="col2"></td>
+                <td class="col3"></td>
+                <td class="col4"></td>
+                <td class="col5"></td>
+                <td class="col6"></td>
+            </tr>
+        </tbody>
+    </table>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <form class="text-center" action='/select/' method="post" name="newgame" value="0">
-            {% csrf_token %}
-            <input type='submit' name="newgame" value='New Game'/>
-        </form>
+    <form class="text-center" action='/select/' method="post" name="newgame" value="0">
+        {% csrf_token %}
+        <input type='submit' class="btn btn-primary" name="newgame" value='New Game' />
+    </form>
 
 </body>
-{% endblock %}
-
-{% block scripts %}
+{% endblock %} {% block scripts %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="../../static/scripts/main.js"></script>
+
 {% endblock %}
